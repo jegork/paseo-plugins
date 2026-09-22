@@ -1,0 +1,14 @@
+**powerbyai_backend/auth/providers/workos.py** — 9 symbols, used by 6 files: powerbyai_backend/auth/dependencies/workos.py, powerbyai_backend/auth/providers/__init__.py, tests/integration/auth/test_workos_service.py, tests/unit/core/auth/test_workos_service.py, powerbyai_backend/auth/routers/workos_auth.py, powerbyai_backend/auth/dependencies/auth.py
+
+**Symbols**
+- `logger` (variable) = structlog.get_logger(__name__) — :16
+- `WorkOSAuthProvider` (class) — :19
+- `__init__` (method) (self, session: AsyncSession) -> None — :22
+- `resolve_user` (method) (self, token: str) -> AuthResult | None — :25
+- `get_authorization_url` (method) ( self, *, connection_id: str | None = None, organization_id: str | None = None, state: str | None = None, ) -> str — :49
+- `authenticate_with_code` (method) (self, code: str) -> tuple[User, str, str, str | None] — :66
+- `authenticate_with_refresh_token` (method) (self, refresh_token: str) -> tuple[str, str] — :80
+- `_upsert_user` (method) (self, workos_user: Any) -> User — :92
+- `verify_access_token` (method) (token: str) -> dict[str, Any] — :154
+
+> Drop `symbolsOnly` (or pass `offset`/`limit`) to read the source, like Read.

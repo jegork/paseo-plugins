@@ -1,0 +1,6 @@
+{
+  "id": "agent-tree",
+  "requirements": {
+    "paseo": ">=0.9.0"
+  }
+}

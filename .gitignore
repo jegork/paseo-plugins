@@ -1,0 +1,5 @@
+node_modules
+
+# separate repos
+paseo-usage-monitor/
+paseo-omp-review/

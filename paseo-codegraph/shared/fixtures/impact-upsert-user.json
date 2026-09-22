@@ -1,0 +1,74 @@
+{
+  "symbol": "_upsert_user",
+  "depth": 2,
+  "nodeCount": 11,
+  "edgeCount": 11,
+  "affected": [
+    {
+      "name": "_upsert_user",
+      "kind": "method",
+      "filePath": "powerbyai_backend/auth/providers/workos.py",
+      "startLine": 92
+    },
+    {
+      "name": "authenticate_with_code",
+      "kind": "method",
+      "filePath": "powerbyai_backend/auth/providers/workos.py",
+      "startLine": 66
+    },
+    {
+      "name": "workos_callback",
+      "kind": "function",
+      "filePath": "powerbyai_backend/auth/routers/workos_auth.py",
+      "startLine": 83
+    },
+    {
+      "name": "test_links_existing_user_by_workos_id",
+      "kind": "method",
+      "filePath": "tests/integration/auth/test_workos_service.py",
+      "startLine": 25
+    },
+    {
+      "name": "test_links_existing_user_by_email",
+      "kind": "method",
+      "filePath": "tests/integration/auth/test_workos_service.py",
+      "startLine": 53
+    },
+    {
+      "name": "test_creates_new_user_when_no_match",
+      "kind": "method",
+      "filePath": "tests/integration/auth/test_workos_service.py",
+      "startLine": 80
+    },
+    {
+      "name": "test_creates_user_with_email_as_name_when_names_empty",
+      "kind": "method",
+      "filePath": "tests/integration/auth/test_workos_service.py",
+      "startLine": 97
+    },
+    {
+      "name": "test_deduplicates_identical_first_and_last_name",
+      "kind": "method",
+      "filePath": "tests/integration/auth/test_workos_service.py",
+      "startLine": 113
+    },
+    {
+      "name": "test_uses_first_name_only_when_last_empty",
+      "kind": "method",
+      "filePath": "tests/integration/auth/test_workos_service.py",
+      "startLine": 126
+    },
+    {
+      "name": "test_skips_soft_deleted_user_by_email",
+      "kind": "method",
+      "filePath": "tests/integration/auth/test_workos_service.py",
+      "startLine": 140
+    },
+    {
+      "name": "test_updates_email_on_linked_user",
+      "kind": "method",
+      "filePath": "tests/integration/auth/test_workos_service.py",
+      "startLine": 169
+    }
+  ]
+}

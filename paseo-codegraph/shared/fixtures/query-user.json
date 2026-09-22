@@ -1,0 +1,111 @@
+[
+  {
+    "node": {
+      "id": "class:bffeace6503abf4a4b77390fc6453200",
+      "kind": "class",
+      "name": "User",
+      "qualifiedName": "User",
+      "filePath": "powerbyai_backend/users/entities/user.py",
+      "language": "python",
+      "startLine": 32,
+      "endLine": 157,
+      "startColumn": 0,
+      "endColumn": 5,
+      "visibility": null,
+      "isExported": false,
+      "isAsync": false,
+      "isStatic": false,
+      "isAbstract": false,
+      "updatedAt": 1788873170364
+    },
+    "score": 107.83514787023171
+  },
+  {
+    "node": {
+      "id": "function:b971ccfc1ceeb0f7e4cc7185c1ddc349",
+      "kind": "function",
+      "name": "user",
+      "qualifiedName": "user",
+      "filePath": "tests/integration/ai/test_conversation_capture_collections.py",
+      "language": "python",
+      "startLine": 22,
+      "endLine": 26,
+      "startColumn": 0,
+      "endColumn": 18,
+      "signature": "(\n    engine, test_user_credentials, client: AsyncClient, permission_service: PermissionService, mocker\n) -> AsyncGenerator[entities.User]",
+      "visibility": null,
+      "isExported": false,
+      "isAsync": false,
+      "isStatic": false,
+      "isAbstract": false,
+      "updatedAt": 1788788888733
+    },
+    "score": 79.83514787023171
+  },
+  {
+    "node": {
+      "id": "function:63fb18700be23da8c0a4c05b9a59b4ef",
+      "kind": "function",
+      "name": "user",
+      "qualifiedName": "user",
+      "filePath": "tests/integration/ai/test_conversation_capture_cross_turn.py",
+      "language": "python",
+      "startLine": 22,
+      "endLine": 26,
+      "startColumn": 0,
+      "endColumn": 18,
+      "signature": "(\n    engine, test_user_credentials, client: AsyncClient, permission_service: PermissionService, mocker\n) -> AsyncGenerator[entities.User]",
+      "visibility": null,
+      "isExported": false,
+      "isAsync": false,
+      "isStatic": false,
+      "isAbstract": false,
+      "updatedAt": 1788788888736
+    },
+    "score": 79.83514787023171
+  },
+  {
+    "node": {
+      "id": "function:3c736175c6e0ac80e84c580bde963f2a",
+      "kind": "function",
+      "name": "user",
+      "qualifiedName": "user",
+      "filePath": "tests/integration/ai/test_conversation_lineage_persistence.py",
+      "language": "python",
+      "startLine": 21,
+      "endLine": 25,
+      "startColumn": 0,
+      "endColumn": 18,
+      "signature": "(\n    engine, test_user_credentials, client: AsyncClient, permission_service: PermissionService, mocker\n) -> AsyncGenerator[entities.User]",
+      "visibility": null,
+      "isExported": false,
+      "isAsync": false,
+      "isStatic": false,
+      "isAbstract": false,
+      "updatedAt": 1788788888739
+    },
+    "score": 79.83514787023171
+  },
+  {
+    "node": {
+      "id": "function:deae2620fdb4bc42ddf0c341ec629299",
+      "kind": "function",
+      "name": "user",
+      "qualifiedName": "user",
+      "filePath": "tests/integration/datasources/test_collection_dao.py",
+      "language": "python",
+      "startLine": 22,
+      "endLine": 34,
+      "startColumn": 0,
+      "endColumn": 15,
+      "signature": "(db_session: AsyncSession) -> entities.User",
+      "visibility": null,
+      "isExported": false,
+      "isAsync": false,
+      "isStatic": false,
+      "isAbstract": false,
+      "updatedAt": 1788788889620
+    },
+    "score": 79.83514787023171
+  }
+]

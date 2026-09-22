@@ -1,0 +1,1 @@
+No indexed file matches "does/not/exist.py". Codegraph indexes source files; configs/docs it doesn't parse won't appear — Read those directly.

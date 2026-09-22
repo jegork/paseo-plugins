@@ -1,0 +1,6 @@
+**powerbyai_backend/users/entities/user.py** — 1 symbol, used by 102 files: powerbyai_backend/ai/catalog/provider.py, powerbyai_backend/audit/entities/agbw_continue_acknowledgment.py, powerbyai_backend/audit/entities/agbw_row_comment.py, powerbyai_backend/audit/entities/agbw_row_confirmation.py, powerbyai_backend/audit/entities/audit_project_audit_file_upload_link.py, powerbyai_backend/bug_reports/entities/bug_report.py, powerbyai_backend/content/entities/help_center.py, powerbyai_backend/content/entities/release_note.py, +94 more
+
+**Symbols**
+- `User` (class) — :32
+
+> Drop `symbolsOnly` (or pass `offset`/`limit`) to read the source, like Read.
