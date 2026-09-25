@@ -1,11 +1,30 @@
 import { execFile } from "node:child_process";
 import { accessSync, constants } from "node:fs";
-import { delimiter } from "node:path";
+import { homedir } from "node:os";
+import { delimiter, join } from "node:path";
 
 // the daemon is started by the desktop app with a minimal PATH, so brew binaries need a fallback lookup
-const FALLBACK_DIRS = ["/opt/homebrew/bin", "/usr/local/bin", `${process.env.HOME ?? ""}/.local/bin`];
+const FALLBACK_DIRS = ["/opt/homebrew/bin", "/usr/local/bin", join(homedir(), ".local", "bin")];
 
 const resolved = new Map<string, string>();
+
+export function executableNames(
+  name: string,
+  platform: NodeJS.Platform = process.platform,
+  pathExt: string | undefined = process.env.PATHEXT,
+): string[] {
+  if (platform !== "win32") return [name];
+
+  const extensions = (pathExt || ".COM;.EXE;.BAT;.CMD")
+    .split(";")
+    .filter(Boolean);
+
+  if (extensions.some((extension) => name.toLowerCase().endsWith(extension.toLowerCase()))) {
+    return [name];
+  }
+
+  return [name, ...extensions.map((extension) => `${name}${extension}`)];
+}
 
 export function resolveBinary(name: string): string {
   const cached = resolved.get(name);
@@ -13,13 +32,15 @@ export function resolveBinary(name: string): string {
   const dirs = [...(process.env.PATH ?? "").split(delimiter), ...FALLBACK_DIRS];
   for (const dir of dirs) {
     if (!dir) continue;
-    const candidate = `${dir}/${name}`;
-    try {
-      accessSync(candidate, constants.X_OK);
-      resolved.set(name, candidate);
-      return candidate;
-    } catch {
-      // keep looking
+    for (const executableName of executableNames(name)) {
+      const candidate = join(dir, executableName);
+      try {
+        accessSync(candidate, constants.X_OK);
+        resolved.set(name, candidate);
+        return candidate;
+      } catch {
+        // keep looking
+      }
     }
   }
   throw new Error(`${name} is not installed or not on PATH`);
