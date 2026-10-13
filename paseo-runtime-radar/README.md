@@ -20,7 +20,7 @@ are refused outright.
 ## Install
 
 ```sh
-paseo plugin add jegork/paseo-runtime-radar
+paseo plugin add jegork/runtime-radar
 ```
 
 Requires `lsof` on the daemon machine; `docker` is optional and its absence is shown on the panel.
